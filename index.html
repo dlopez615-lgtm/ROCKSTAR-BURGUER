@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rockstar Burguer</title>
+
+    <link rel="stylesheet" href="diseño.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         PANTALLA DE INICIO
+         ========================= -->
+
+    <section id="inicio" class="pantalla-inicio">
+
+        <div class="contenido-inicio">
+
+            <h1>ROCKSTAR</h1>
+
+            <h2>BURGUER</h2>
+
+            <p>
+                Las mejores hamburguesas para los verdaderos rockstars
+            </p>
+
+            <button
+                class="boton-iniciar"
+                onclick="iniciar()"
+            >
+                INICIAR
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PANTALLA PRINCIPAL
+         ========================= -->
+
+    <section
+        id="principal"
+        class="pantalla-principal"
+    >
+
+        <header>
+
+            <h1>ROCKSTAR BURGUER</h1>
+
+            <p>
+                ¡Bienvenido! ¿Qué deseas hacer?
+            </p>
+
+        </header>
+
+
+
+        <main>
+
+
+            <!-- =========================
+                 BOTONES PRINCIPALES
+                 ========================= -->
+
+            <div class="botones-menu">
+
+
+                <button onclick="verMenu()">
+
+                    <span>🍔</span>
+
+                    <strong>
+                        1. Ver menú
+                    </strong>
+
+                    <small>
+                        Conoce nuestros productos
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="mostrarPedido()">
+
+                    <span>🛒</span>
+
+                    <strong>
+                        2. Hacer pedido
+                    </strong>
+
+                    <small>
+                        Realiza tu pedido
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="verResumen()">
+
+                    <span>📋</span>
+
+                    <strong>
+                        3. Ver resumen
+                    </strong>
+
+                    <small>
+                        Consulta tu pedido
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="verTotal()">
+
+                    <span>💰</span>
+
+                    <strong>
+                        4. Total a pagar
+                    </strong>
+
+                    <small>
+                        Consulta el valor total
+                    </small>
+
+                </button>
+
+
+
+                <button onclick="salir()">
+
+                    <span>🚪</span>
+
+                    <strong>
+                        5. Salir
+                    </strong>
+
+                    <small>
+                        Salir del restaurante
+                    </small>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 VER MENÚ
+                 ========================= -->
+
+            <section
+                id="menu"
+                class="seccion"
+            >
+
+                <h2>🍔 NUESTRO MENÚ</h2>
+
+
+                <div class="productos">
+
+
+                    <div class="producto">
+
+                        <h3>
+                            Rockstar Clásica
+                        </h3>
+
+                        <p>
+                            Hamburguesa clásica
+                        </p>
+
+                        <strong>
+                            $15.000
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="producto">
+
+                        <h3>
+                            Rockstar Doble
+                        </h3>
+
+                        <p>
+                            Doble carne para más sabor
+                        </p>
+
+                        <strong>
+                            $20.000
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="producto">
+
+                        <h3>
+                            Perro Rockstar
+                        </h3>
+
+                        <p>
+                            Hot dog al estilo Rockstar
+                        </p>
+
+                        <strong>
+                            $12.000
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="producto">
+
+                        <h3>
+                            Papas Rockstar
+                        </h3>
+
+                        <p>
+                            Papas crujientes
+                        </p>
+
+                        <strong>
+                            $6.000
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="producto">
+
+                        <h3>
+                            Gaseosa Rockstar
+                        </h3>
+
+                        <strong>
+                            $4.000
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 HACER PEDIDO
+                 ========================= -->
+
+            <section
+                id="pedido"
+                class="seccion"
+            >
+
+                <h2>
+                    🛒 ORDENA TU PEDIDO
+                </h2>
+
+
+                <div class="pedido-contenedor">
+
+
+                    <!-- =========================
+                         FORMULARIO
+                         ========================= -->
+
+                    <div class="formulario-pedido">
+
+                        <h3>
+                            TOMAR ORDEN
+                        </h3>
+
+
+                        <label for="producto">
+
+                            Selecciona el producto:
+
+                        </label>
+
+
+                        <select id="producto">
+
+
+                            <option value="0">
+
+                                -- Selecciona un producto --
+
+                            </option>
+
+
+                            <option value="1">
+
+                                Rockstar Clásica - $15.000
+
+                            </option>
+
+
+                            <option value="2">
+
+                                Rockstar Doble - $20.000
+
+                            </option>
+
+
+                            <option value="3">
+
+                                Perro Rockstar - $12.000
+
+                            </option>
+
+
+                            <option value="4">
+
+                                Papas Rockstar - $6.000
+
+                            </option>
+
+
+                            <option value="5">
+
+                                Gaseosa Rockstar - $4.000
+
+                            </option>
+
+
+                        </select>
+
+
+
+                        <label for="cantidad">
+
+                            Cantidad:
+
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="cantidad"
+                            min="1"
+                            value="1"
+                        >
+
+
+
+                        <button
+                            class="boton-agregar"
+                            onclick="agregarProducto()"
+                        >
+
+                            AGREGAR PRODUCTO
+
+                        </button>
+
+
+
+                        <button
+                            class="boton-confirmar"
+                            onclick="confirmarPedido()"
+                        >
+
+                            CONFIRMAR PEDIDO
+
+                        </button>
+
+
+                        <p id="mensaje"></p>
+
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         MENÚ DE APOYO
+                         ========================= -->
+
+                    <div class="menu-apoyo">
+
+                        <h3>
+                            🍔 MENÚ
+                        </h3>
+
+
+                        <div class="producto-apoyo">
+
+                            <strong>
+                                Rockstar Clásica
+                            </strong>
+
+                            <span>
+                                $15.000
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="producto-apoyo">
+
+                            <strong>
+                                Rockstar Doble
+                            </strong>
+
+                            <span>
+                                $20.000
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="producto-apoyo">
+
+                            <strong>
+                                Perro Rockstar
+                            </strong>
+
+                            <span>
+                                $12.000
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="producto-apoyo">
+
+                            <strong>
+                                Papas Rockstar
+                            </strong>
+
+                            <span>
+                                $6.000
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="producto-apoyo">
+
+                            <strong>
+                                Gaseosa Rockstar
+                            </strong>
+
+                            <span>
+                                $4.000
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                     PRODUCTOS AGREGADOS
+                     ========================= -->
+
+                <div class="pedido-actual">
+
+                    <h3>
+                        🛒 PRODUCTOS AGREGADOS
+                    </h3>
+
+
+                    <div id="listaPedido">
+
+                        <p>
+                            Aún no has agregado productos.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 RESUMEN
+                 ========================= -->
+
+            <section
+                id="resumen"
+                class="seccion"
+            >
+
+                <h2>
+                    📋 RESUMEN DEL PEDIDO
+                </h2>
+
+
+                <div id="datosResumen">
+
+                    <p>
+                        No hay ningún pedido realizado.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =========================
+                 TOTAL
+                 ========================= -->
+
+            <section
+                id="total"
+                class="seccion"
+            >
+
+                <h2>
+                    💰 TOTAL A PAGAR
+                </h2>
+
+
+                <p id="totalTexto">
+
+                    No hay ningún pedido realizado.
+
+                </p>
+
+
+            </section>
+
+
+
+            <!-- =========================
+                 SALIDA
+                 ========================= -->
+
+            <section
+                id="salida"
+                class="seccion"
+            >
+
+                <h2>
+
+                    ¡GRACIAS POR VISITAR
+                    ROCKSTAR BURGUER!
+
+                </h2>
+
+
+                <p>
+
+                    Vuelve pronto, Rockstar 🤘
+
+                </p>
+
+
+            </section>
+
+
+        </main>
+
+
+    </section>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

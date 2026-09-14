@@ -1,0 +1,764 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+   ========================= */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #0b0b0b;
+
+    color: white;
+
+}
+
+
+
+/* =========================
+   PANTALLA DE INICIO
+   ========================= */
+
+.pantalla-inicio {
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #080808,
+        #1a1a1a,
+        #300000
+    );
+
+}
+
+
+.contenido-inicio {
+
+    width: 90%;
+
+    max-width: 600px;
+
+}
+
+
+.contenido-inicio h1 {
+
+    margin: 0;
+
+    font-size: 70px;
+
+    letter-spacing: 8px;
+
+    color: #ff3131;
+
+}
+
+
+.contenido-inicio h2 {
+
+    margin: 0;
+
+    font-size: 50px;
+
+    letter-spacing: 12px;
+
+}
+
+
+.contenido-inicio p {
+
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    color: #cccccc;
+
+}
+
+
+
+/* =========================
+   BOTÓN INICIAR
+   ========================= */
+
+.boton-iniciar {
+
+    margin-top: 35px;
+
+    width: 220px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #e50914;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.boton-iniciar:hover {
+
+    background-color: #ff3131;
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* =========================
+   PANTALLA PRINCIPAL
+   ========================= */
+
+.pantalla-principal {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding-bottom: 50px;
+
+    background-color: #0b0b0b;
+
+}
+
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
+header {
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #180000,
+        #300000
+    );
+
+}
+
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 40px;
+
+    color: #ff3131;
+
+}
+
+
+header p {
+
+    margin-top: 10px;
+
+    color: #cccccc;
+
+}
+
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+   ========================= */
+
+main {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 35px auto;
+
+}
+
+
+
+/* =========================
+   BOTONES PRINCIPALES
+   ========================= */
+
+.botones-menu {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+.botones-menu button {
+
+    min-height: 150px;
+
+    padding: 25px;
+
+    border: 1px solid #333;
+
+    border-radius: 15px;
+
+    background-color: #171717;
+
+    color: white;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: 0.3s;
+
+}
+
+
+.botones-menu button:hover {
+
+    background-color: #252525;
+
+    transform: translateY(-5px);
+
+    border-color: #e50914;
+
+}
+
+
+.botones-menu span {
+
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.botones-menu strong {
+
+    display: block;
+
+    font-size: 18px;
+
+}
+
+
+.botones-menu small {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: #999;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================
+   SECCIONES
+   ========================= */
+
+.seccion {
+
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background-color: #171717;
+
+    border-radius: 15px;
+
+    border: 1px solid #333;
+
+    text-align: center;
+
+}
+
+
+.seccion h2 {
+
+    margin-top: 0;
+
+    color: #ff3131;
+
+}
+
+
+
+/* =========================
+   PRODUCTOS
+   ========================= */
+
+.productos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(200px, 1fr)
+        );
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.producto {
+
+    padding: 20px;
+
+    background-color: #222;
+
+    border-radius: 12px;
+
+    border: 1px solid #333;
+
+    transition: 0.3s;
+
+}
+
+
+.producto:hover {
+
+    border-color: #e50914;
+
+    transform: translateY(-3px);
+
+}
+
+
+.producto h3 {
+
+    margin-top: 0;
+
+}
+
+
+.producto p {
+
+    color: #aaa;
+
+}
+
+
+.producto strong {
+
+    color: #ff3131;
+
+    font-size: 20px;
+
+}
+
+
+
+/* =========================
+   PEDIDO
+   ========================= */
+
+.pedido-contenedor {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    margin-top: 25px;
+
+    text-align: left;
+
+}
+
+
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+.formulario-pedido {
+
+    padding: 25px;
+
+    background-color: #222;
+
+    border-radius: 15px;
+
+    border: 1px solid #333;
+
+}
+
+
+.formulario-pedido h3 {
+
+    margin-top: 0;
+
+    text-align: center;
+
+    color: #ff3131;
+
+    font-size: 24px;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    font-size: 17px;
+
+}
+
+
+select,
+input {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+}
+
+
+select:focus,
+input:focus {
+
+    outline: 2px solid #e50914;
+
+}
+
+
+
+/* =========================
+   BOTÓN AGREGAR
+   ========================= */
+
+.boton-agregar {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #333;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.boton-agregar:hover {
+
+    background-color: #444;
+
+}
+
+
+
+/* =========================
+   BOTÓN CONFIRMAR
+   ========================= */
+
+.boton-confirmar {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #e50914;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.boton-confirmar:hover {
+
+    background-color: #ff3131;
+
+    transform: scale(1.02);
+
+}
+
+
+#mensaje {
+
+    text-align: center;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+
+}
+
+
+
+/* =========================
+   MENÚ DE APOYO
+   ========================= */
+
+.menu-apoyo {
+
+    padding: 25px;
+
+    background-color: #222;
+
+    border-radius: 15px;
+
+    border: 1px solid #333;
+
+}
+
+
+.menu-apoyo h3 {
+
+    margin-top: 0;
+
+    text-align: center;
+
+    color: #ff3131;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.producto-apoyo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    background-color: #171717;
+
+    border-radius: 8px;
+
+    border: 1px solid #333;
+
+}
+
+
+.producto-apoyo strong {
+
+    font-size: 16px;
+
+}
+
+
+.producto-apoyo span {
+
+    color: #ff3131;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =========================
+   PEDIDO ACTUAL
+   ========================= */
+
+.pedido-actual {
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background-color: #222;
+
+    border-radius: 15px;
+
+    border: 1px solid #333;
+
+    text-align: left;
+
+}
+
+
+.pedido-actual h3 {
+
+    margin-top: 0;
+
+    color: #ff3131;
+
+    text-align: center;
+
+}
+
+
+.item-pedido {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    background-color: #171717;
+
+    border-radius: 8px;
+
+}
+
+
+.item-pedido span {
+
+    color: #ff3131;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =========================
+   TOTAL
+   ========================= */
+
+#totalTexto {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #ff3131;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .contenido-inicio h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .contenido-inicio h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .pedido-contenedor {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    main {
+
+        width: 95%;
+
+    }
+
+}
